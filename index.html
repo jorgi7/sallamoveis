@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salla Móveis — Catálogo</title>
+<meta name="theme-color" content="#F5F3EF" id="themeColorMeta">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -52,14 +53,12 @@
 
 <section class="hero" id="top">
   <div class="wrap">
-    <div>
-      <div class="hero-eyebrow">Móveis de qualidade</div>
-      <h1>Peças que dão espaço para o essencial</h1>
-      <p>Escolha entre móveis que valorizam cada espaço, com acabamentos bem-cuidados e opções para diferentes estilos de casa. Enviamos seu pedido para todo o Brasil.</p>
-      <div class="hero-actions">
-        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
-        <a href="#sobre" class="btn btn-ghost">Conhecer a Salla</a>
-      </div>
+    <div class="hero-eyebrow">Móveis de qualidade</div>
+    <h1>Peças que dão espaço para o essencial</h1>
+    <p>Escolha entre móveis que valorizam cada espaço, com acabamentos bem-cuidados e opções para diferentes estilos de casa. Enviamos seu pedido para todo o Brasil.</p>
+    <div class="hero-actions">
+      <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+      <a href="#sobre" class="btn btn-ghost">Conhecer a Salla</a>
     </div>
     <div class="hero-visual">
       <svg viewBox="0 0 400 400" aria-hidden="true">
@@ -72,7 +71,7 @@
 </section>
 
 <div class="cat-strip">
-  <div class="wrap" id="catStrip">
+  <div class="cat-strip-inner" id="catStrip">
     <button data-cat="todos" class="active">Todos</button>
     <button data-cat="Sala">Sala</button>
     <button data-cat="Jantar">Jantar</button>
@@ -83,11 +82,9 @@
 
 <section class="catalog" id="catalogo">
   <div class="wrap">
-    <div class="catalog-head">
-      <div>
-        <h2>Catálogo</h2>
-        <p>Todas as peças são feitas por encomenda. Fotos reais de cada modelo podem ser adicionadas conforme a produção.</p>
-      </div>
+    <div class="catalog-head reveal">
+      <h2>Catálogo</h2>
+      <p>Todas as peças são feitas por encomenda. Fotos reais de cada modelo podem ser adicionadas conforme a produção.</p>
       <div class="sort">
         <label for="sortSelect">Ordenar por</label>
         <select id="sortSelect">
@@ -103,16 +100,16 @@
 
 <section class="about" id="sobre">
   <div class="wrap">
-    <div class="about-mark">
+    <div class="about-mark reveal">
       <svg viewBox="0 0 300 300" aria-hidden="true">
         <circle cx="135" cy="115" r="71" fill="#B5622E" opacity="0.85"/>
         <polygon points="145,90 53,225 255,251" fill="#6B4A34"/>
         <polygon points="145,90 173,231 255,251" fill="#4A3223"/>
       </svg>
     </div>
-    <div>
+    <div class="reveal">
       <h2>Qualidade escolhida para durar</h2>
-      <p> Selecionamos móveis de fornecedores confiáveis, com atenção à qualidade, ao acabamento e ao conforto em cada detalhe.</p>
+      <p>Selecionamos móveis de fornecedores confiáveis, com atenção à qualidade, ao acabamento e ao conforto em cada detalhe.</p>
       <p>Nossa curadoria reúne móveis duráveis e de qualidade para deixar sua casa ou escritório mais bonita, funcional e acolhedora — com entrega para todo o Brasil.</p>
       <div class="about-stats">
         <div><strong>37 anos</strong><span>de loja</span></div>
@@ -125,7 +122,7 @@
 
 <section class="contact" id="contato">
   <div class="wrap">
-    <div>
+    <div class="reveal">
       <h3>Visite a loja</h3>
       <ul>
         <li>Rua Cristalino Silveira Machado, 55 — Centro</li>
@@ -133,7 +130,7 @@
       </ul>
       <a class="btn btn-ghost maps-btn" href="https://www.google.com/maps/@-26.2523492,-53.6389903,3a,89.8y,271.08h,93.43t/data=!3m7!1e1!3m5!1sqSuVR_5X7CbyeV0dIlBWUQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.4348065930446836%26panoid%3DqSuVR_5X7CbyeV0dIlBWUQ%26yaw%3D271.0762868651604!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ver no Maps</a>
     </div>
-    <div>
+    <div class="reveal">
       <h3>Fale conosco</h3>
       <ul>
         <li><a href="mailto:vendas@sallainformatica.com.br">vendas@sallainformatica.com.br</a></li>
@@ -141,7 +138,7 @@
         <li><a href="https://www.instagram.com/sallamoveis/" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
     </div>
-    <div>
+    <div class="reveal">
       <h3>Dúvidas sobre um móvel?</h3>
       <p>Fale direto com a equipe pelo WhatsApp e confira disponibilidade, prazos, acabamentos e faça seu orçamento.</p>
       <a class="btn btn-primary whatsapp-btn" href="https://wa.me/5549984273153" target="_blank" rel="noopener">Conversar no WhatsApp</a>
