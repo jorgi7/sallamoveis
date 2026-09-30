@@ -236,7 +236,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon{ display:block; }
 @media (max-width: 780px){
   .about .wrap{ grid-template-columns: 1fr; text-align:center; }
   .about-mark{ max-width:220px; margin:0 auto; }
-  .about-stats{ justify-content:center; }
+  .about-stats{ flex-direction: column; align-items:center; gap: 28px; }
   .contact .wrap{ grid-template-columns: 1fr; gap:44px; text-align:center; }
 }
 
