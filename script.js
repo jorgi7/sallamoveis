@@ -98,7 +98,7 @@ function render(){
   }
   items.forEach(p => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card reveal';
     card.innerHTML = `
       <div class="card-media">${ICONS[p.icon]}</div>
       <div class="card-info">
@@ -112,6 +112,7 @@ function render(){
     card.addEventListener('click', () => openModal(p));
     grid.appendChild(card);
   });
+  observeReveals();
 }
 
 document.getElementById('catStrip').addEventListener('click', (e) => {
@@ -155,6 +156,8 @@ function applyTheme(theme){
   rootEl.setAttribute('data-theme', theme);
   themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
   themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+  const meta = document.getElementById('themeColorMeta');
+  if(meta) meta.setAttribute('content', theme === 'dark' ? '#0B0A0B' : '#F5F3EF');
   try{ localStorage.setItem('salla-theme', theme); }catch(e){}
 }
 
@@ -192,6 +195,20 @@ window.addEventListener('scroll', () => {
     ticking = true;
   }
 });
+
+// Revelar elementos suavemente conforme entram na tela
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+function observeReveals(){
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => revealObserver.observe(el));
+}
 
 document.getElementById('year').textContent = '© ' + new Date().getFullYear();
 
